@@ -1,0 +1,387 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17324d;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #607286;
+}
+
+/* Navigation */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    z-index: 10;
+    background: rgba(7, 29, 51, 0.35);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #42c7f5;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #42c7f5;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 130px 10% 80px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 27, 51, 0.9),
+            rgba(4, 27, 51, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.subtitle {
+    color: #8de2ff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 95px);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.hero-content > p:not(.subtitle) {
+    max-width: 500px;
+    color: #e5eff7;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 30px;
+    background: #0799df;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0877b5;
+    transform: translateY(-3px);
+}
+
+/* Introduction */
+.intro {
+    padding: 90px 10%;
+    text-align: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.tag {
+    color: #078fce;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.intro > p:last-child {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Destinations */
+.destinations {
+    padding: 80px 8%;
+    text-align: center;
+    background: #f5f9fc;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.card {
+    overflow: hidden;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(17, 51, 77, 0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 15px;
+}
+
+/* Itinerary */
+.itinerary {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.day {
+    padding: 25px;
+    border-radius: 12px;
+    background: #edf7fc;
+    border-left: 4px solid #0799df;
+    transition: 0.3s;
+}
+
+.day:hover {
+    background: #dceff9;
+    transform: translateY(-4px);
+}
+
+.day span {
+    color: #078fce;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.day h3 {
+    margin: 10px 0;
+    font-size: 19px;
+}
+
+.day p {
+    font-size: 14px;
+}
+
+/* Culture and Food */
+.culture {
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    background: #f5f9fc;
+}
+
+.culture-text ul {
+    margin-top: 25px;
+    padding-left: 22px;
+}
+
+.culture-text li {
+    margin-bottom: 12px;
+    color: #607286;
+}
+
+.culture-text strong {
+    color: #17324d;
+}
+
+.culture-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(17, 51, 77, 0.12);
+}
+
+/* Conclusion */
+.conclusion {
+    padding: 90px 10%;
+    text-align: center;
+    color: white;
+    background: linear-gradient(120deg, #0b2945, #087eae);
+}
+
+.conclusion h2 {
+    color: white;
+}
+
+.conclusion > p:not(.tag) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #d9eaf5;
+}
+
+.conclusion .btn {
+    background: white;
+    color: #0b2945;
+}
+
+.conclusion .btn:hover {
+    background: #dceff9;
+}
+
+/* Footer */
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    background: #071d33;
+}
+
+footer h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #b7c9d8;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    header {
+        padding: 20px 5%;
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .days {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .culture {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        position: absolute;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 650px;
+        padding: 160px 7% 70px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .intro,
+    .destinations,
+    .itinerary,
+    .culture {
+        padding: 60px 7%;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .cards,
+    .days,
+    .culture {
+        grid-template-columns: 1fr;
+    }
+
+    .culture-image img {
+        height: 280px;
+    }
+}
